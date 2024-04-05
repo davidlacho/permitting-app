@@ -22,15 +22,7 @@ const getAllSubmissions = (
   database.find({}, callback);
 };
 
-const getSubmissionById = (
-  _id: string,
-  callback: (err: Error | null, document: Submission) => void
-) => {
-  database.findOne({ _id }, callback);
-};
-
 export default {
   addSubmission,
   getAllSubmissions,
-  getSubmissionById,
 };

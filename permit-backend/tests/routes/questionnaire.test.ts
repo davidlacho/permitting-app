@@ -245,37 +245,6 @@ describe('Questionnaire Routes', () => {
     });
   });
 
-  describe('GET /submissions/:id', () => {
-    it('should return a specific submission by id', async () => {
-      const mockSubmission = {
-        id: '123',
-        type: 'Exterior work',
-        workDetails: ['Fencing'],
-        permitRequirement: 'No Permit',
-      };
-      (submissionModel.getSubmissionById as jest.Mock).mockImplementation(
-        (_id, callback) => callback(null, mockSubmission)
-      );
-
-      const response = await request(app).get('/submissions/123');
-
-      expect(response.status).toBe(200);
-      expect(response.body).toEqual(mockSubmission);
-      expect(submissionModel.getSubmissionById).toHaveBeenCalledTimes(1);
-    });
-
-    it('should return 404 if the submission is not found', async () => {
-      (submissionModel.getSubmissionById as jest.Mock).mockImplementation(
-        (_id, callback) => callback(null, null)
-      );
-
-      const response = await request(app).get('/submissions/nonexistent-id');
-
-      expect(response.status).toBe(404);
-      expect(response.body).toHaveProperty('message', 'Submission not found');
-    });
-  });
-
   describe('GET /permit-options', () => {
     it('should return the entire tree structure of permit options', async () => {
       const expectedTreeStructure = {

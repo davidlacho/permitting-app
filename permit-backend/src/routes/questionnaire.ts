@@ -74,23 +74,6 @@ router.get('/submissions', (_req, res) => {
   });
 });
 
-router.get('/submissions/:id', (req, res) => {
-  const { id } = req.params;
-
-  submissionModel.getSubmissionById(id, (err, document) => {
-    if (err) {
-      res.status(400).send({
-        error: 'Error fetching submission from the database',
-        details: err,
-      });
-    } else if (!document) {
-      res.status(404).send({ message: 'Submission not found' });
-    } else {
-      res.status(200).send(document);
-    }
-  });
-});
-
 router.get('/permit-options', (_req, res) => {
   try {
     const treeStructure = permitService.tree;
