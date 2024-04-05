@@ -1,5 +1,11 @@
 import { TreeLeaf, TreeNode, TreeNodeJson } from './IPermitTree';
 
+enum PermitProcess {
+  OverTheCounterSubmission = 'Over-the-Counter Submission Process',
+  InHouseReview = 'In-House Review Process',
+  NoPermit = 'No Permit',
+}
+
 export class PermitTree {
   private static instance: PermitTree;
   private rootNode: TreeNode;
@@ -24,10 +30,10 @@ export class PermitTree {
           new TreeNode(
             'What interior work are you doing?',
             new Map([
-              ['Bathroom remodel', 'Over-the-Counter Submission Process'],
-              ['New bathroom', 'In-House Review Process'],
-              ['New laundry room', 'In-House Review Process'],
-              ['Other', 'In-House Review Process'],
+              ['Bathroom remodel', PermitProcess.OverTheCounterSubmission],
+              ['New bathroom', PermitProcess.InHouseReview],
+              ['New laundry room', PermitProcess.InHouseReview],
+              ['Other', PermitProcess.InHouseReview],
             ])
           ),
         ],
@@ -41,8 +47,8 @@ export class PermitTree {
                 new TreeNode(
                   'Are you also working on exterior doors?',
                   new Map<string, TreeNode | string>([
-                    ['Yes', 'Over-the-Counter Submission Process'],
-                    ['No', 'Over-the-Counter Submission Process'],
+                    ['Yes', PermitProcess.OverTheCounterSubmission],
+                    ['No', PermitProcess.OverTheCounterSubmission],
                   ])
                 ),
               ],
@@ -51,13 +57,13 @@ export class PermitTree {
                 new TreeNode(
                   'Are you also replacing the garage door?',
                   new Map<string, TreeNode | string>([
-                    ['Yes', 'Over-the-Counter Submission Process'],
-                    ['No', 'Over-the-Counter Submission Process'],
+                    ['Yes', PermitProcess.OverTheCounterSubmission],
+                    ['No', PermitProcess.OverTheCounterSubmission],
                   ])
                 ),
               ],
-              ['Fencing', 'No Permit'],
-              ['Other', 'In-House Review Process'],
+              ['Fencing', PermitProcess.NoPermit],
+              ['Other', PermitProcess.InHouseReview],
             ])
           ),
         ],
