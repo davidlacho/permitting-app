@@ -101,13 +101,13 @@ Operations
 
 ## Notes on Submission
 
-### Approach for Integrating Multiple Selections:
+### Approach for Integrating Multiple Selections
 Although I didn't get to its implementation, the existing decision tree structure can accommodate multiple selections through the following enhancements:
 
 - Decision Tree Adaptation: The decision nodes within the tree can be modified to handle arrays of selections as inputs rather than single selections. This involves adjusting the navigation logic to iterate over multiple inputs at each decision point and aggregate the resulting permit requirements based on the combination of choices.
 - UI Enhancements: The user interface can be enhanced to allow multiple selections. This could involve checkboxes or multi-select dropdown menus, enabling users to indicate all applicable options for their project. The UI would then communicate these selections as an array to the backend for processing.
 
-### Improvements:
+### Improvements
 
 - The current implementation uses a static decision tree to navigate permit requirements. An optimal design would involve a dynamic permit process engine capable of generating permit processes based on configurable rules and conditions stored in a database or a rule engine. This would allow for easy updates to the permitting logic without needing to modify the codebase.
 - Abstracting the data model to support various types of permits, workflows, and municipalities would involve creating a more flexible schema that can accommodate different data fields, validation rules, and workflows. 
@@ -119,4 +119,6 @@ Although I didn't get to its implementation, the existing decision tree structur
 
 - I also wrote Jest tests in the backend for TDD to ensure that each endpoint could be tested in isolation. 
 
+### 3 Hour Time Window
 
+I went over the three hour time allotted to this project. This additional time allowed me to thoroughly implement a robust tree structure that accurately reflects real-world decision-making processes in the permit application flow. It also enabled me to incorporate a comprehensive testing strategy that aligns with Test-Driven Development (TDD) practices, ensuring the reliability and maintainability of the codebase. I was commited to quality submission and I wanted to ensure that the application’s architecture is scalable and facilitates future enhancements and the integration of new features without significant refactoring.
