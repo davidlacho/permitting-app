@@ -2,6 +2,10 @@
 
 This project provides a system for handling permit applications for various types of work, including interior and exterior modifications. The system allows users to submit details about their projects and receive information on the necessary permit requirements.
 
+## Video Walkthrough
+
+[![Video](https://cdn.loom.com/sessions/thumbnails/f266be9c92f74737b3b194888321fe72-with-play.gif)](https://www.loom.com/embed/f266be9c92f74737b3b194888321fe72?sid=83d2425f-061f-4855-948c-af329f14a9b0 "Video")
+
 ## Features
 
 - **Questionnaire for Permit Requirements**: Users click through the type of work they plan to undertake. Based on their responses, the system identifies the necessary permit requirements.
