@@ -84,6 +84,11 @@ make start
 
 This command installs all necessary dependencies for both backend and frontend, and starts both applications.
 
+5. **Stopping the Frontend and Backend Application**
+```bash
+make stop
+```
+
 ## API Endpoints
 
 - **POST `/api/questionnaire/submit`**: Submit a new permit application.
