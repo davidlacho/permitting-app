@@ -127,7 +127,3 @@ Although I didn't get to its implementation, the existing decision tree structur
 - I wrote a tree structure because it naturally mirrors the decision-making process users follow when determining permit requirements. Each branch represents a decision path, leading to a final outcome based on a series of choices. This makes the tree structure intuitive both for developers working on the code and for users interacting with the final application.
 
 - I also wrote Jest tests in the backend for TDD to ensure that each endpoint could be tested in isolation. 
-
-### 3 Hour Time Window
-
-I went over the three hour time allotted to this project. This additional time allowed me to thoroughly implement a robust tree structure that accurately reflects real-world decision-making processes in the permit application flow. It also enabled me to incorporate a comprehensive testing strategy that aligns with Test-Driven Development (TDD) practices, ensuring the reliability and maintainability of the codebase. I was commited to quality submission and I wanted to ensure that the application’s architecture is scalable and facilitates future enhancements and the integration of new features without significant refactoring.
